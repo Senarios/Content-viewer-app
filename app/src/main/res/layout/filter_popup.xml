@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#CCffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/border_style_round_gray"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:scaleType="fitEnd"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:src="@drawable/ic_crossvectorsvg" />
+
+        <TextView
+            android:id="@+id/idGiftCardPopUpMessageAlertTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Filter"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Time"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/idTodayRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:text="Today"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/idThisWeekRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:text="This week"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="This week"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/idThisMonthRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="This month"
+                        android:buttonTint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="This month"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/idAll"
+                        android:checked="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="All"
+                        android:buttonTint="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="All"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Type"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <ProgressBar
+                    android:id="@+id/eventTypeProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerInParent="true"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:id="@+id/type_RV"/>
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="35dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="40dp"-->
+                <!--                        android:buttonTint="@color/black" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Travel"-->
+                <!--                        android:fontFamily="@font/montserrat_regular"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:textColor="@color/black" />-->
+
+
+                <!--                </LinearLayout>-->
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="35dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="40dp"-->
+                <!--                        android:buttonTint="@color/black" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Gaming"-->
+                <!--                        android:fontFamily="@font/montserrat_regular"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:textColor="@color/black" />-->
+                <!--                </LinearLayout>-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="35dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="40dp"-->
+                <!--                        android:buttonTint="@color/black" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Make up"-->
+                <!--                        android:fontFamily="@font/montserrat_regular"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:textColor="@color/black" />-->
+
+
+                <!--                </LinearLayout>-->
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="35dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="40dp"-->
+                <!--                        android:buttonTint="@color/black" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Fun"-->
+                <!--                        android:fontFamily="@font/montserrat_regular"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:textColor="@color/black" />-->
+
+
+                <!--                </LinearLayout>-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="35dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="40dp"-->
+                <!--                        android:buttonTint="@color/black" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Cooking"-->
+                <!--                        android:fontFamily="@font/montserrat_regular"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:textColor="@color/black" />-->
+
+
+                <!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/idVerifyPhoneBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveFilterBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background_new_color"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical|center"
+                android:padding="@dimen/_15sdp"
+                android:text="Save Filters"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

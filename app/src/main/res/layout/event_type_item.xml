@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="38dp">
+
+    <CheckBox
+        android:id="@+id/eventCheck"
+        android:layout_width="wrap_content"
+        android:text="Travel"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:buttonTint="@color/black" />
+
+    <TextView
+        android:id="@+id/eventType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Travel"
+        android:visibility="gone"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+</LinearLayout>

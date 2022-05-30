@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/border_style_round_gray"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:scaleType="fitEnd"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:src="@drawable/ic_crossvectorsvg" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Purchase Ticket"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+        <LinearLayout
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amountTxt"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/priceRadioBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:checked="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:text="Purchase ticket through"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=" Sign in"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otherAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio1"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/amountRadioBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:text="Purchase tickets as"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=" Guest users"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal">
+
+            </TextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/idVerifyPhoneBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/purchaseTicketBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background_new_color"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical|center"
+                android:padding="@dimen/_15sdp"
+                android:text="purchase ticket"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
